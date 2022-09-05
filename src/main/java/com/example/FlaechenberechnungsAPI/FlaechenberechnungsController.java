@@ -12,9 +12,12 @@ public class FlaechenberechnungsController {
     FlaechenberechnungsService service =new FlaechenberechnungsService();
 
    @GetMapping("/calculate")
-   public double circle(@RequestParam double circle){
+   public double circle(@RequestParam double circle) {
        return service.circle(circle);
    }
-
+    @GetMapping("/square")
+    public double square(@RequestParam double square){
+        return service.square(square);
+    }
 
 }
